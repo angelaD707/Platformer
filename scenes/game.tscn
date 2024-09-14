@@ -1,11 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://cbsx2jc2qomkj"]
+[gd_scene load_steps=16 format=3 uid="uid://cbsx2jc2qomkj"]
 
 [ext_resource type="PackedScene" uid="uid://hgridu8xv5kh" path="res://scenes/player.tscn" id="1_k76gp"]
+[ext_resource type="Script" path="res://scenes/game_manager.gd" id="1_qyn1y"]
+[ext_resource type="FontFile" uid="uid://dq7vao8uypmor" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_ajkle"]
 [ext_resource type="Texture2D" uid="uid://dyw2njruwc86k" path="res://assets/sprites/world_tileset.png" id="2_ls31x"]
 [ext_resource type="PackedScene" uid="uid://dfpgo6fan6o2u" path="res://scenes/platform.tscn" id="3_1ljdh"]
 [ext_resource type="PackedScene" uid="uid://bikp1fxe1hvho" path="res://scenes/coin.tscn" id="4_b1s06"]
 [ext_resource type="PackedScene" uid="uid://rjxw4olhym64" path="res://scenes/killzone.tscn" id="5_lxkk7"]
 [ext_resource type="PackedScene" uid="uid://jpgllfda1jw0" path="res://scripts/slime.tscn" id="6_4vtx4"]
+[ext_resource type="FontFile" uid="uid://bp3bhg4f2dxyp" path="res://assets/fonts/PixelOperator8.ttf" id="7_bvssd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_03wyk"]
 texture = ExtResource("2_ls31x")
@@ -219,6 +222,21 @@ _data = {
 
 [node name="Game" type="Node2D"]
 
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_qyn1y")
+
+[node name="ScoreLabel" type="Label" parent="GameManager"]
+offset_left = 1303.0
+offset_top = -450.0
+offset_right = 1476.0
+offset_bottom = -427.0
+theme_override_fonts/font = ExtResource("2_ajkle")
+theme_override_font_sizes/font_size = 8
+text = "You collected X coins."
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, -1)
 tile_set = SubResource("TileSet_6crpm")
@@ -324,5 +342,19 @@ position = Vector2(-1, 153)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_1cad8")
 
-[node name="Slime" parent="." instance=ExtResource("6_4vtx4")]
+[node name="Labels" type="Node" parent="."]
+
+[node name="Spacetojump" type="Label" parent="Labels"]
+offset_left = -416.0
+offset_top = -45.0
+offset_right = -325.0
+offset_bottom = -22.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_bvssd")
+theme_override_font_sizes/font_size = 8
+text = "Space to jump."
+
+[node name="Slimes" type="Node" parent="."]
+
+[node name="Slime" parent="Slimes" instance=ExtResource("6_4vtx4")]
 position = Vector2(-213, 31)
