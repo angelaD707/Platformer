@@ -9,7 +9,7 @@ Angela Dong
 set up repo with readme, git config, and empty project files
 
 ### jennaL808 - Jenna Li
- Added double jump, contributed to first fourth to tutorial, and edited some of the map.
+ Added double jump, contributed to first fourth of the tutorial, and edited some of the map.
  ### angelaD707 - Angela Dong 
  Contributed to 3/4's of the tutorial, also edited some of the map 
 
