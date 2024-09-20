@@ -3,7 +3,7 @@ Character jumps and goes through obstacles
 
 
 ## Team Members
-Jenna Li
+Jenna Li and 
 Angela Dong
 ### fchsLemke - Mr. Lemke
 set up repo with readme, git config, and empty project files
@@ -14,4 +14,5 @@ set up repo with readme, git config, and empty project files
 
 ## Reflections
 Angela Dong (angelaD707): For this project, I have discovered that details are important like whether the block on the map is low enough to jump on or whether the code was correct without any misspelling. Some obstacles I encountered was not Github not committing sometimes cause me to redo what I've already done multiple times.
+
 Jenna Li (jennaL808): In this project, I realized that coding isn't as challenging as I thought. I added the double jump and it was way easier than I thought. Challenges that were challenging to me was the platform not moving as expected. I ended up figuring it out and fixed it.  
