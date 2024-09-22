@@ -1,5 +1,5 @@
 # Platformer Project
-Character jumps and goes through obstacles 
+Character jumps and faces obstacles 
 
 
 ## Team Members
