@@ -314,14 +314,15 @@ text = "You collected X coins."
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Label" type="Label" parent="."]
-offset_left = 1556.0
-offset_top = -399.0
-offset_right = 2160.0
-offset_bottom = -376.0
+[node name="Label" type="Label" parent="GameManager/ScoreLabel"]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 54.0
+offset_right = 567.0
+offset_bottom = 63.0
 theme_override_fonts/font = ExtResource("2_ajkle")
 theme_override_font_sizes/font_size = 8
-text = "CONGRATS!! YOU GOT TO THE SECRET TUNNEL!!!"
+text = "Congats! You have entered the secret tunnel! "
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, -1)
